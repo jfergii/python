@@ -44,7 +44,8 @@ while attemptNum != attemptNumLimit:
         attemptNum = attemptNum + 1
     elif guess == numberToGuess:
         print("Success! Number to guess was:", numberToGuess)
-        print("You've won the game! Congrats! ")
+        print("You've won the game!")
+        print("Congrats!")
         print("See you next time!")
         sys.exit()
 
