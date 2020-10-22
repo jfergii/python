@@ -1,3 +1,4 @@
+#imports required for exit and math
 import sys
 import random
 
@@ -5,6 +6,7 @@ print("Welcome to the number game!")
 print("Would you like to play?")
 answer = input("Please answer (yes) or (no):")
 
+#beginning logic for starting the game
 if answer == "yes":
     print("Great! Lets continue...")
 elif answer == "no":
@@ -15,21 +17,24 @@ else:
 
 print("game starting...")
 
-
+#not sure if i need to initialize the variables....
 lowerNumber = input("Please enter the lower number of the range you wish to guess from:")
 upperNumber = input("Please enter the high number of the range you wish to guess from:")
 lowerNumber = int(lowerNumber)
 upperNumber = int(upperNumber)
 
+#this print was made when i didn't initialize the variables
 print("Your range is: ", lowerNumber, " to ", upperNumber)
 numberToGuess = random.randint(lowerNumber, upperNumber)
 numberToGuess = int(numberToGuess)
 
-print("You get 5 guesses. Good Luck!")
-guess = input("What number would you like to guess?: ")
-guess = int(guess)
+#attempt number control variables 
 attemptNum = int(1)
 attemptNumLimit = int(5)
+
+print("You get ", attemptNum, " guesses. Good Luck!")
+guess = input("What number would you like to guess?: ")
+guess = int(guess)
 
 while attemptNum != attemptNumLimit:
     if guess > numberToGuess:
