@@ -36,6 +36,7 @@ print("You get ", attemptNum, " guesses. Good Luck!")
 guess = input("What number would you like to guess?: ")
 guess = int(guess)
 
+#while loop for attempt limit - not sure if this could be done better
 while attemptNum != attemptNumLimit:
     if guess > numberToGuess:
         print("The number is lower than ", guess)
@@ -52,12 +53,13 @@ while attemptNum != attemptNumLimit:
         print("You've won the game!")
         print("Congrats!")
         print("See you next time!")
-        sys.exit()
+        sys.exit()  #are these proper exits?
 
 if attemptNum == attemptNumLimit:
     print("You've tried too many times. You lose.")
     print("The number was:", numberToGuess)
 
+#not sure if i can end the program  in a better way
 print("Game Exiting...")
 sys.exit()
 
